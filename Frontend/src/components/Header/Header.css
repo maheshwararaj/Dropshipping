@@ -1,0 +1,121 @@
+.header{
+    height: 34vw;
+    margin: 30px auto;
+    background: url('/header-img-2.jpg') no-repeat ;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+     animation: bgchange 20s infinite ease-in-out; 
+
+}
+.header-contents{
+    position: absolute;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation: fadeIn 3s;
+}
+
+.header-contents h2{
+    font-weight: 500;
+    color: white;
+    font-size: max(4.5vw,22px);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.503);
+}
+.header-contents p{
+    color: white;
+    font-size: 1vw;
+}
+.header-contents button{
+    border: none;
+    color: var(--clr-pr);
+
+    font-weight: 500;
+    padding: 1vw 2.3vw;
+    background-color: white;
+    font-size: max(1.1vw,13px);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.header-contents button:hover{
+    background-color: rgb(222, 220, 220);
+}
+
+@media (max-width:1050px) {
+    
+    .header{
+        height: 38vw;
+    }
+    .header-contents{
+        max-width: 45%;
+        bottom: 15%;
+    }
+}
+
+@media (max-width:780px) {
+  
+    .header-contents{
+        max-width: 65%;
+    }
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:450px) {
+    
+    .header{
+        height: 38vw;
+    }
+    .header-contents{
+        max-width:75%;
+       
+    }
+   
+}
+
+
+@keyframes bgchange{
+    0%{
+        
+    background: url('/header-temp.jpeg')  no-repeat;
+    background-size: cover;
+    }
+    20%{
+        
+        background: url('/header-temp.jpeg')  no-repeat;
+        background-size: cover;
+        }
+    33%{
+
+        background: url('/header-img-2.jpg')  no-repeat;
+        background-size: cover;
+    }
+    60%{
+
+        background: url('/header-img-2.jpg')  no-repeat;
+        background-size: cover;
+    }
+    77%{
+
+        background: url('/header-img-3.jpg') ;
+        background-size: cover;
+    }
+    90%{
+
+        background: url('/header-img-3.jpg') ;
+        background-size: cover;
+    }
+    100%{
+        background: url('/header-temp.jpeg')  no-repeat;   
+        background-size: cover;
+    }
+}

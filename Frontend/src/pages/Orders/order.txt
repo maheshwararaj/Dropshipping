@@ -1,0 +1,52 @@
+ 
+  
+    
+
+  return (
+    <div className='orders'>
+        <h2>Your Orders</h2>
+        
+        <p>4 orders</p>
+        <div className="orders-container">
+            {orderList.map((item,index)=>{return(
+                <div className="order-item" key={index}>
+                <div className="detail">
+                    <p id='status'>  {item.status}</p>
+                    <p id='payment'>{item.payment}</p>
+                    <p id='amount'>${item.amount}</p>
+                    <p id='date'>{item.date}</p>
+                </div>
+                <hr />
+                <div className="product-address-container">
+                    
+                    <div className="product-detail">
+                        
+                        {
+                            item.item.map((product)=>{
+                                return(
+                                    <div className="product">
+                                        <img src={foodimg} alt="" />
+                                        <p id='product-name'>{product.name}</p>
+                                        <p>{product.quantity}</p>
+                                        <p>${product.price}</p>
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
+                    <div className="address">
+                        <h4>Address</h4>
+                        <p>{item.address.firstname} {item.address.lastname}</p>
+                        <p>{item.address.street} {item.address.area}</p>
+                        <p>{item.address.city} {item.address.state}</p>
+                        <p>{item.address.country} {item.address.pincode}</p>  
+                    </div> 
+                </div>
+            </div>
+            );})
+            
+            }  
+            </div>
+        </div>
+  
+  )

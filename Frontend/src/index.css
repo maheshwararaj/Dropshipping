@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+:root{
+  --clr-pr:#03045e;
+  --clr-pr-dr:#000128;
+  --clr-pr-md:#0077b6;
+  --clr-pr-dr-lt:#0089d3;
+  --clr-pr-lt:#00b4d8;
+  --clr-pr-vlt:#90e0ef;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'outfit', sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  scroll-behavior: smooth;
+
+}
+
+ul{
+  list-style: none;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+body{
+  min-height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app{
+  position: relative;
+  width: 100;
+  margin: auto;
+}
+.section {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes  fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.tomato-button{
+  
+  background-color: var(--clr-pr-md);
+  color: white;
+  font-weight: 500;
+  border:1px solid transparent;
+  padding: 8px 10px;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .3s;
+}
+.tomato-button:hover{
+  background-color:white;
+  color: var(--clr-pr-md);
+  border: 1px solid var(--clr-pr-md);
+}
