@@ -34,7 +34,7 @@ const StoreContextProvider = (props) => {
             else{
                 const response = await axios.get(`${url}/login/success`,{withCredentials:true});
                 if(response.data.user){
-                    console.log(response.data.user)
+                    console.log("user" + response.data.user)
                     const res = await axios.get(`${url}/user/getUserByGoogle`,{"googleId":response.data.user.googleId})
                     console.log(res)
                     setUserData(res.data.user);

@@ -5,7 +5,7 @@ import { Storecontext } from "../../context/Storecontext";
 import './Fooditem.css'
 const Fooditem = ({ id, name, price, description, image, cat }) => {
 
-  
+   
     const {cartItems,addToCart,removeFromCart,url} = useContext(Storecontext)
     description = description.length > 80 ? description.substring(0,80)+".." : description;
   return (

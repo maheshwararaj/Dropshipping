@@ -1,0 +1,19 @@
+.productdisplay{
+    width: 100%;
+    scroll-behavior: smooth;
+    
+}
+
+.productdisplay-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px;
+    overflow-x:scroll;
+    scroll-behavior: smooth;
+}
+.productdisplay-list::-webkit-scrollbar{
+    display: none;
+}

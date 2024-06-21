@@ -57,21 +57,3 @@ a{
     opacity: 1;
   }
 }
-
-.tomato-button{
-  
-  background-color: var(--clr-pr-md);
-  color: white;
-  font-weight: 500;
-  border:1px solid transparent;
-  padding: 8px 10px;
-  border-radius: 7px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: .3s;
-}
-.tomato-button:hover{
-  background-color:white;
-  color: var(--clr-pr-md);
-  border: 1px solid var(--clr-pr-md);
-}
