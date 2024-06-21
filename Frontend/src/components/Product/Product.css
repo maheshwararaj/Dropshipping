@@ -1,5 +1,6 @@
 .product{
-    min-width: 300px;
+    min-width: 260px;
+    max-width: 300px;
     padding: 10px;
     display: flex;
     gap: 10px;
@@ -13,7 +14,7 @@
 .product-image-container{
     border-radius: 4px 4px 8px 8px;
     width: 100%;
-    height: 300px;
+    height: 260px;
     overflow: hidden;
     position: relative;
 }
@@ -31,6 +32,7 @@
     position: absolute;
     bottom: 10px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
 }
@@ -39,21 +41,90 @@
     gap: 10px;
     align-items: center;
     justify-content: space-between;
+    text-shadow: 0 0 5px #00000046;
 }
+
+.add{
+    font-size: 18px;
+    padding: 2px 9px;
+    border-radius: 50%;
+    background-color:  rgba(255, 255, 255, 0.68);
+}
+.added{
+    font-size: 18px;
+    padding: 2px 7px;
+    color: white;
+    background-color: var(--clr-pr-md);
+    border-radius: 50%;
+    animation: added .3s;
+}
+
 .review-container{
     background-color: rgba(255, 255, 255, 0.68);
     padding:0 4px;
     border-radius: 6px;
-  
+    box-shadow: 0 0 5px #00000046;
 }
 .review-container span{
     font-size: 16px;
-    color:var(--clr-pr-md);
+    color:var(--clr-pr-dr);
 }
 
 .product-info{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 4px;
     align-items: flex-start;
 }
+.product-name{
+    font-size:18px;
+    font-weight: 700;
+}
+.product-brand{
+    font-size: 14px;
+    color: gray;
+}
+.product-amount-off{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+.product-amount{
+    font-weight: 600;
+}
+.product-amount span{
+    color: rgb(45, 45, 45);
+    margin-left: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration:line-through;
+}
+.product-off{
+    color: var(--clr-pr-md);
+}
 
+
+@keyframes added{
+    0%{
+       background-color: white;
+        transform: rotateY(180deg);
+    }
+   
+    100%{
+        background-color: var(--clr-pr-md);
+        transform: rotateY(0deg);
+    }
+}
+
+@media (max-width:500px){
+    .product{
+        min-width: 260px;
+    }
+    .product-image-container{
+        height: 260px;
+    }
+    .added{
+        padding: 1px 5px;
+    }
+}

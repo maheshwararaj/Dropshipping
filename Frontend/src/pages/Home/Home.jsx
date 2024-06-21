@@ -12,6 +12,8 @@ const Home = () => {
     <div className='section'>
         <Header/>
         <TagTemplate tag="Recent Finds"/>
+        <TagTemplate tag="Recent Finds"/>
+        <TagTemplate tag="Recent Finds"/>
         <Appdownload/>
         
     </div>

@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Product.css'
 import { assets } from '../../assets/assets'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import AddButton from '../SmallElements/AddButton';
 const Product = ({product}) => {
-
+  const [isAdded,setIsAdded] = useState(true)
   return (
     <div className='product'>
         <div className="product-image-container">
@@ -15,15 +16,17 @@ const Product = ({product}) => {
                    {product.rating} <span>&#x2605;</span>
                 </div>
                 <div className="add-to-cart">
-                  <FontAwesomeIcon className={false ? "added" : ""} icon={faCartShopping} />
-                  <p>{false ? "":"Add"}</p>
+                  <p onClick={()=>setIsAdded(!isAdded)} className={isAdded ? "added" : "add"}>{isAdded ? "✔" : "+"}</p>
                 </div>
             </div>
         </div>
         <div className="product-info">
           <p className='product-name'>{product.name}</p>
           <p className='product-brand'>{product.brand}</p>
-          <p className='product-amount'>Rs.{product.amount} <span className='product-mrp'>Rs.{product.mrp}</span></p>
+          <div className="product-amount-off">
+            <p className='product-amount'>Rs.{product.amount} <span className='product-mrp'>Rs.{product.mrp}</span></p>
+            <p className='product-off'>70% off</p>
+          </div>
         </div>
     </div>
   )
