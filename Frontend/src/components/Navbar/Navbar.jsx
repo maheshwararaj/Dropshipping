@@ -29,6 +29,7 @@ export const Navbar = ({ setShowLogin }) => {
 
   useEffect(() => {
     getUser();
+    console.log(userdata)
   }, []);
 
   const getTotalItemsIntheCart = () => {
@@ -44,7 +45,7 @@ export const Navbar = ({ setShowLogin }) => {
             <h3>{userdata.name}</h3>
           </div>
           <Link to={"/profile"} onClick={handleClick}>
-            <li >
+            <li>
               <FontAwesomeIcon icon={faUserEdit} /> Edit Profile
             </li>
           </Link >
