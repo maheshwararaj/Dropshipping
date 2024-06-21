@@ -106,7 +106,7 @@ app.get("/logout",(req,res,next)=>{
 
 //endpoints
 app.get("/",(req,res)=>{
-    res.send("APIne")
+    res.send("APIsfaskakjdfdfne")
 })
 
 app.use('/user',userRouter)
