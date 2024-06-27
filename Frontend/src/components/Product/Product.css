@@ -103,7 +103,20 @@
 .product-off{
     color: var(--clr-pr-md);
 }
-
+.toast-msg{
+    
+    width: 100px;
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    visibility: hidden;
+    color: white;
+    left:calc(50% - 50px);
+    backdrop-filter: brightness(0.4);
+    border-radius: 4px;
+    animation: fade 2s;
+   
+}
 
 @keyframes added{
     0%{
@@ -116,13 +129,27 @@
         transform: rotateY(0deg);
     }
 }
-
+@keyframes fade {
+    0%{
+        opacity: 0;
+        top: 60%;
+        visibility: visible;
+    }
+    50%{
+        top: 50%;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+     visibility: hidden;
+    }
+}
 @media (max-width:500px){
     .product{
-        min-width: 260px;
+        min-width: 230px;
     }
     .product-image-container{
-        height: 260px;
+        height: 200px;
     }
     .added{
         padding: 1px 5px;

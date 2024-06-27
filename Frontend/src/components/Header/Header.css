@@ -77,8 +77,9 @@
     }
     .header-contents{
         max-width:75%;
-       
+        bottom:5px;
     }
+
    
 }
 

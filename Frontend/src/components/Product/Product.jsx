@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import AddButton from '../SmallElements/AddButton';
 const Product = ({product}) => {
-  const [isAdded,setIsAdded] = useState(true)
+  const [isAdded,setIsAdded] = useState(false)
   return (
     <div className='product'>
         <div className="product-image-container">
@@ -19,6 +19,9 @@ const Product = ({product}) => {
                   <p onClick={()=>setIsAdded(!isAdded)} className={isAdded ? "added" : "add"}>{isAdded ? "✔" : "+"}</p>
                 </div>
             </div>
+            {
+                  isAdded ? <p className='toast-msg'>Added to cart</p> : ""
+            }
         </div>
         <div className="product-info">
           <p className='product-name'>{product.name}</p>
