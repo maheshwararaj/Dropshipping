@@ -1,6 +1,7 @@
+
 .productdisplay{
     width: 100%;
-    scroll-behavior: smooth;
+    
 }
 
 .productdisplay-list{
@@ -11,7 +12,8 @@
     gap: 10px;
     padding: 10px 0;
     overflow-x:scroll;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch;
 }
 .productdisplay-list::-webkit-scrollbar{
     display: none;

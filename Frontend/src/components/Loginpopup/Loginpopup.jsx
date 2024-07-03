@@ -25,7 +25,7 @@ const Loginpopup = ({setShowLogin}) => {
     }
 
     const onGoogleLogin = ()=>{
-            window.open("http://localhost:6005/auth/google/callback","_self")
+        window.open("http://localhost:6005/auth/google/callback","_self")
     }
 
     
@@ -55,6 +55,10 @@ const Loginpopup = ({setShowLogin}) => {
        }
        gettinguser();
     },[])
+
+    
+
+    
 
   return (
     <div className='login-popup'>

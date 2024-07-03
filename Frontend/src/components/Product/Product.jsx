@@ -10,7 +10,7 @@ const Product = ({product}) => {
   return (
     <div className='product'>
         <div className="product-image-container">
-            <img src={assets.shirt} alt={product.name} />
+            <img src={product.image} alt={product.name} />
             <div className="image-absolutes">
                 <div className="review-container">
                    {product.rating} <span>&#x2605;</span>

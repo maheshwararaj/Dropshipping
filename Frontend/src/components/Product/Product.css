@@ -1,5 +1,5 @@
 .product{
-    min-width: 260px;
+    min-width: 230px;
     max-width: 300px;
     padding: 10px;
     display: flex;
@@ -14,7 +14,6 @@
 .product-image-container{
     border-radius: 4px 4px 8px 8px;
     width: 100%;
-    height: 260px;
     overflow: hidden;
     position: relative;
 }
@@ -149,7 +148,7 @@
         min-width: 230px;
     }
     .product-image-container{
-        height: 200px;
+        height: 230px;
     }
     .added{
         padding: 1px 5px;

@@ -28,12 +28,12 @@
 }
 .header-contents p{
     color: white;
-    font-size: 1vw;
+    font-size: 1.2vw;
+    text-shadow: 1px 1px 3px #00000097;
 }
 .header-contents button{
     border: none;
     color: var(--clr-pr);
-
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
